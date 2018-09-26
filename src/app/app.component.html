@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<nav>
+    <!-- 
+    A routerLink attribute is set to "/heroes", the string that the router matches
+    to the route to HeroesComponent. The routerLink is the selector for the RouterLink
+    directive that turns user clicks into router navigations. It's another of the public
+    directives in the RouterModule.-->
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+<!-- https://next.angular.io/api/router/RouterOutlet
+    The <router-outlet> tells the router where to display routed views.
+    The RouterOutlet is one of the router directives that became available
+    to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule.
+-->
+<router-outlet></router-outlet>
+<app-messages></app-messages>

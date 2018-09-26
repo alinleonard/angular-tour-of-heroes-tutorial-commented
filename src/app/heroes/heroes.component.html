@@ -1,0 +1,26 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <!-- https://next.angular.io/guide/template-syntax#ngFor
+    The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.
+  -->
+  <!-- 
+    The parentheses around click tell Angular to listen for the <li> element's click event.
+    When the user clicks in the <li>, Angular executes the onSelect(hero) expression.
+    onSelect() is a HeroesComponent method that you're about to write.
+    Angular calls it with the hero object displayed in the clicked <li>,
+    the same hero defined previously in the *ngFor expression.
+  -->
+  <!-- https://next.angular.io/guide/template-syntax#class-binding
+    The Angular class binding makes it easy to add and remove a CSS class conditionally.
+    Just add [class.some-css-class]="some-condition" to the element you want to style.
+  -->
+  <!-- https://next.angular.io/guide/template-syntax#interpolation
+     You're using Angular interpolation binding within the *ngFor repeater to insert
+     the current iteration's hero.id into each routerLink.
+  -->
+  <li *ngFor="let hero of heroes" 
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
